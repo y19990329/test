@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/zufang</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="format_sql">true</property>
+        <property name="show_sql">true</property>
+        <mapping resource="entity/District.hbm.xml"/>
+        <mapping class="entity.District"/>
+        <mapping resource="entity/House.hbm.xml"/>
+        <mapping class="entity.House"/>
+        <mapping resource="entity/Street.hbm.xml"/>
+        <mapping class="entity.Street"/>
+        <mapping resource="entity/Types.hbm.xml"/>
+        <mapping class="entity.Types"/>
+        <mapping resource="entity/Users.hbm.xml"/>
+        <mapping class="entity.Users"/>
+    </session-factory>
+</hibernate-configuration>
